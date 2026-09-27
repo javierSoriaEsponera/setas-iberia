@@ -1,8 +1,8 @@
 """Capa de hábitat.
 
 - Mapa Forestal de España (pipeline/mfe.py): superficie real de cada grupo forestal. Fuente principal.
-- GBIF: respaldo para Portugal y provincias sin MFE (géneros arbóreos por celda de 0,25º),
-  y citas georreferenciadas de cada seta.
+- GBIF: respaldo para Portugal, provincias sin MFE y arbolado del MFE que no se pudo asignar
+  a ninguna especie (géneros arbóreos por celda de 0,25º), y citas georreferenciadas de cada seta.
 
   python -m pipeline.habitat      # descarga lo de GBIF (una vez, 15-30 min)
 """
@@ -133,7 +133,19 @@ def fine_habitat(cells: list[dict], link: np.ndarray, step: float = GRID_STEP) -
                          "(GBIF) y, si puedes, python -m pipeline.mfe (Mapa Forestal).")
 
     n = len(cells)
-    cov = np.array(mfe["coverage"]) if mfe else np.zeros(n)
+    cov = np.clip(np.array(mfe["coverage"]), 0, 1) if mfe else np.zeros(n)
+
+    # Parte del arbolado del MFE que sí se asignó a una especie. Donde el MFE tiene arbolado
+    # sin reconocer, esa parte se completa con GBIF en lugar de darla por «sin bosque».
+    # Un mfe_0.1.json antiguo (sin «unassigned») se trata como totalmente reconocido.
+    if mfe:
+        assigned = np.sum([np.array(mfe["frac"][g]) for g in HOST_GROUPS], 0)
+        unassigned = np.array(mfe.get("unassigned", np.zeros(n)))
+        forest = assigned + unassigned
+        known = np.where(forest > 1e-4, assigned / np.maximum(forest, 1e-9), 1.0)
+    else:
+        known = np.zeros(n)
+
     hosts, dens = {}, {}
     for g, info in HOST_GROUPS.items():
         if mfe:
@@ -143,22 +155,23 @@ def fine_habitat(cells: list[dict], link: np.ndarray, step: float = GRID_STEP) -
             dens[g] = np.zeros(n); idx_mfe = np.zeros(n)
         genus, factor = info["gbif"]
         idx_gbif = np.array(gbif["hosts"][genus])[link] * factor if gbif else np.zeros(n)
-        w = np.clip(cov, 0, 1)
-        hosts[g] = w * idx_mfe + (1 - w) * idx_gbif
+        # MFE donde cubre la celda; GBIF en la parte no cubierta y en el arbolado sin reconocer
+        hosts[g] = np.clip(cov * idx_mfe + (1 - cov * known) * idx_gbif, 0, 1)
 
     groups = list(HOST_GROUPS)
     H = np.stack([hosts[g] for g in groups], 1)
     D = np.stack([dens[g] for g in groups], 1)
     dom = H.argmax(1)
-    forest = [[int(dom[k]), int(round(100 * D[k, dom[k]])) if cov[k] > 0.5 else -1]
-              if H[k, dom[k]] > 0.05 else [-1, -1] for k in range(n)]
+    # El % de superficie solo se muestra si procede del MFE (celda cubierta y especie reconocida)
+    forest_info = [[int(dom[k]), int(round(100 * D[k, dom[k]])) if cov[k] > 0.5 and D[k, dom[k]] > 0 else -1]
+                   if H[k, dom[k]] > 0.05 else [-1, -1] for k in range(n)]
 
     occ = {}
     if POINTS_FILE.exists():
         points = json.loads(POINTS_FILE.read_text())
         nbrs = neighbours(cells, 3)
         occ = {k: occurrence_layer(p, cells, step, nbrs) for k, p in points.items()}
-    return {"hosts": hosts, "occ": occ, "forest": forest,
+    return {"hosts": hosts, "occ": occ, "forest": forest_info,
             "mfe_cells": int((cov > 0.5).sum()), "sources": mfe["sources"] if mfe else []}
 
 
