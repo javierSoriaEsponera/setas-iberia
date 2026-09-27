@@ -32,7 +32,7 @@ INFO = {
         "confusion": "Otros boletos de carne azulante; algunos provocan trastornos digestivos.",
     },
     "neoboletus_erythropus": {
-        "desc": "Poros rojos y pie punteado de rojo; su carne amarilla se vuelve azul oscuro al instante al "
+        "desc": "Su nombre válido actual es Neoboletus luridiformis. Poros rojos y pie punteado de rojo; su carne amarilla se vuelve azul oscuro al instante al "
                 "cortarla. Aparece en bosques de suelo ácido de todo tipo. Solo es comestible bien cocinado.",
         "confusion": "Rubroboletus satanas y otros boletos de poros rojos, tóxicos, sobre todo en suelos calizos.",
     },
@@ -45,13 +45,21 @@ INFO = {
     },
     "cantharellus_lutescens": {
         "desc": "Sombrero pardo sobre un pie hueco amarillo anaranjado y parte inferior casi lisa. Forma "
-                "colonias numerosas en el musgo húmedo de pinares y bosques mixtos, ya bien avanzado el otoño.",
+                "colonias numerosas en el musgo húmedo de pinares de pino albar o laricio, casi siempre sobre "
+                "suelos calizos y en umbrías, ya bien avanzado el otoño y aun después de las heladas.",
         "confusion": "Craterellus tubaeformis, también comestible, con pliegues grisáceos bajo el sombrero.",
     },
-    "niscalos": {
-        "desc": "Láminas y látex anaranjados en L. deliciosus o rojo vino en L. sanguifluus; las zonas "
-                "rozadas se manchan de verde. Siempre bajo pinos, y de las setas más abundantes del otoño.",
+    "lactarius_deliciosus": {
+        "desc": "Sombrero anaranjado con círculos concéntricos, láminas y látex naranja zanahoria; las zonas "
+                "rozadas se manchan de verde. Siempre bajo pinos, sobre todo en suelos ácidos o neutros, y de "
+                "las setas más abundantes del otoño.",
         "confusion": "Lactarius torminosus, tóxico: sombrero con pelos en el borde y látex blanco.",
+    },
+    "lactarius_sanguifluus": {
+        "desc": "Muy parecido al níscalo, pero con tonos más vinosos y un látex rojo oscuro, como de sangre. "
+                "Prefiere pinares de carrasco, laricio o silvestre sobre suelos calizos, donde el níscalo "
+                "común escasea.",
+        "confusion": "Lactarius torminosus, tóxico: sombrero peludo y látex blanco.",
     },
     "pie_azul": {
         "desc": "Sombrero y láminas lila violáceo que se vuelven pardos con la edad, con olor afrutado. Se "

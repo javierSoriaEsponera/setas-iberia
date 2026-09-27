@@ -23,7 +23,7 @@ def _wait_for(reason: str) -> float:
     if "hour" in reason:
         now = datetime.now(timezone.utc)
         return (60 - now.minute) * 60 - now.second + 30  # hasta la siguiente hora + margen
-    if "day" in reason:
+    if "day" in reason or "daily" in reason:
         raise RuntimeError(f"Open-Meteo: {reason}. Prueba mañana o usa un plan de pago.")
     return 65  # límite por minuto
 
