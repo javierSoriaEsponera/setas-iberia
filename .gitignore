@@ -1,0 +1,4 @@
+# Los zip del Mapa Forestal pesan mucho: se procesan en local y solo se sube data/mfe_0.1.json
+data/mfe/
+__pycache__/
+*.pyc
