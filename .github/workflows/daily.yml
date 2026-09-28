@@ -14,6 +14,21 @@ jobs:
     timeout-minutes: 120
     steps:
       - uses: actions/checkout@v4
+      - name: Comprobar que el código está completo
+        run: |
+          faltan=0
+          for f in pipeline/__init__.py pipeline/config.py pipeline/grid.py pipeline/habitat.py pipeline/mfe.py \
+                   pipeline/weather.py pipeline/soil.py pipeline/satellite.py pipeline/model.py pipeline/features.py \
+                   pipeline/calibrate.py pipeline/species_info.py pipeline/run_daily.py requirements.txt docs/index.html; do
+            [ -f "$f" ] || { echo "::error::Falta el fichero $f"; faltan=1; }
+          done
+          grep -q "def _fetch_chunk" pipeline/weather.py || { echo "::error::pipeline/weather.py es una versión antigua"; faltan=1; }
+          grep -q '"ph"' pipeline/config.py || { echo "::error::pipeline/config.py es una versión antigua (sin pH)"; faltan=1; }
+          grep -q "load_ph" pipeline/run_daily.py || { echo "::error::pipeline/run_daily.py es una versión antigua (sin pH ni humedad del suelo)"; faltan=1; }
+          grep -q "rasterio" requirements.txt || { echo "::error::requirements.txt es una versión antigua (falta rasterio)"; faltan=1; }
+          [ $faltan = 0 ] && echo "Código completo y actualizado"
+          exit $faltan
+
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"

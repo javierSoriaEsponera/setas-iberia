@@ -1,0 +1,50 @@
+name: Calibrar modelo con hallazgos
+
+on:
+  schedule:
+    - cron: "0 2 * * 1"    # cada lunes: descarga más meteo histórica y reentrena
+  workflow_dispatch:
+    inputs:
+      gbif:
+        description: "Actualizar también las citas fechadas de GBIF"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+jobs:
+  calibrate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 300
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r requirements-calib.txt
+
+      - name: Recuperar la meteo histórica ya descargada
+        uses: actions/cache@v4
+        with:
+          path: data/modelo/meteo_cache
+          key: meteo-${{ github.run_id }}
+          restore-keys: meteo-
+
+      - name: Citas fechadas de GBIF
+        if: ${{ inputs.gbif || !hashFiles('data/hallazgos/gbif.csv') }}
+        run: python -m pipeline.calibrate gbif
+
+      - name: Dataset y entrenamiento
+        run: |
+          python -m pipeline.calibrate dataset --max-queries 2500
+          python -m pipeline.calibrate train || echo "Aún no hay datos suficientes para entrenar"
+
+      - name: Guardar modelo e informe
+        run: |
+          git config user.name "setas-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/hallazgos data/modelo/lgbm.txt data/modelo/meta.json data/modelo/informe.md || true
+          git commit -m "Calibración $(date -u +%F)" || echo "Sin cambios"
+          git pull --rebase
+          git push
