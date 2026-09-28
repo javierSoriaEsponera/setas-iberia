@@ -32,6 +32,10 @@
    6,
    26
   ],
+  "ph": [
+   4.0,
+   6.0
+  ],
   "hosts": [
    [
     "Hayedo",
@@ -42,7 +46,7 @@
     0.9
    ],
    [
-    "CastaÒar",
+    "Casta√±ar",
     0.9
    ],
    [
@@ -62,12 +66,12 @@
     0.3
    ],
    [
-    "Pinar de carrasco o piÒonero",
+    "Pinar de carrasco o pi√±onero",
     0.1
    ]
   ],
-  "desc": "Sombrero de avellana a pardo con el margen m·s claro y pie abombado con un retÌculo blanco en la parte alta. Vive asociado a hayas, castaÒos, robles y pinos de montaÒa, y sale en oleadas dos o tres semanas despuÈs de lluvias generosas si las noches refrescan sin helar.",
-  "confusion": "Tylopilus felleus: retÌculo oscuro y poros que se vuelven rosados. No es tÛxico, pero su amargor estropea cualquier guiso."
+  "desc": "Sombrero de avellana a pardo con el margen m√°s claro y pie abombado con un ret√≠culo blanco en la parte alta. Vive asociado a hayas, casta√±os, robles y pinos de monta√±a, y sale en oleadas dos o tres semanas despu√©s de lluvias generosas si las noches refrescan sin helar.",
+  "confusion": "Tylopilus felleus: ret√≠culo oscuro y poros que se vuelven rosados. No es t√≥xico, pero su amargor estropea cualquier guiso."
  },
  "boletus_aereus": {
   "name": "Boletus aereus",
@@ -102,13 +106,17 @@
    7,
    20
   ],
+  "ph": [
+   4.0,
+   7.0
+  ],
   "hosts": [
    [
     "Encinar, alcornocal o dehesa",
     1.0
    ],
    [
-    "CastaÒar",
+    "Casta√±ar",
     1.0
    ],
    [
@@ -124,8 +132,8 @@
     0.1
    ]
   ],
-  "desc": "Sombrero pardo muy oscuro, casi negro, a menudo con tacto de terciopelo, y carne blanca que no cambia de color. Es el boleto m·s amante del calor: encinares, alcornocales, rebollares y castaÒares de baja y media altitud, en otoÒos templados y tambiÈn a final de primavera.",
-  "confusion": "Boletus reticulatus, tambiÈn comestible. Descarta cualquier boleto con poros rojos o carne que azulea con fuerza si no lo conoces bien."
+  "desc": "Sombrero pardo muy oscuro, casi negro, a menudo con tacto de terciopelo, y carne blanca que no cambia de color. Es el boleto m√°s amante del calor: encinares, alcornocales, rebollares y casta√±ares de baja y media altitud, en oto√±os templados y tambi√©n a final de primavera.",
+  "confusion": "Boletus reticulatus, tambi√©n comestible. Descarta cualquier boleto con poros rojos o carne que azulea con fuerza si no lo conoces bien."
  },
  "boletus_pinophilus": {
   "name": "Boletus pinophilus",
@@ -160,6 +168,10 @@
    8,
    22
   ],
+  "ph": [
+   4.0,
+   6.0
+  ],
   "hosts": [
    [
     "Pinar de silvestre, negro o laricio",
@@ -174,7 +186,7 @@
     0.5
    ],
    [
-    "CastaÒar",
+    "Casta√±ar",
     0.5
    ],
    [
@@ -186,8 +198,8 @@
     0.4
    ]
   ],
-  "desc": "Sombrero rojizo a granate y pie con tonos rosados. Muy ligado al pino silvestre en montaÒa, con dos salidas: una a final de primavera y otra en el otoÒo cl·sico.",
-  "confusion": "Tylopilus felleus y los boletos de poros rojos, como Rubroboletus satanas, tÛxico, m·s propio de suelos calizos."
+  "desc": "Sombrero rojizo a granate y pie con tonos rosados. Muy ligado al pino silvestre en monta√±a, con dos salidas: una a final de primavera y otra en el oto√±o cl√°sico.",
+  "confusion": "Tylopilus felleus y los boletos de poros rojos, como Rubroboletus satanas, t√≥xico, m√°s propio de suelos calizos."
  },
  "imleria_badia": {
   "name": "Imleria badia",
@@ -222,6 +234,10 @@
    8,
    22
   ],
+  "ph": [
+   3.5,
+   6.0
+  ],
   "hosts": [
    [
     "Pinar de silvestre, negro o laricio",
@@ -240,7 +256,7 @@
     0.5
    ],
    [
-    "CastaÒar",
+    "Casta√±ar",
     0.4
    ],
    [
@@ -248,7 +264,7 @@
     0.3
    ]
   ],
-  "desc": "Sombrero castaÒo, viscoso con la humedad, y poros amarillentos que azulean al presionarlos. Frecuente en pinares sobre suelo ·cido, incluso a baja altitud y hasta entrado el invierno.",
+  "desc": "Sombrero casta√±o, viscoso con la humedad, y poros amarillentos que azulean al presionarlos. Frecuente en pinares sobre suelo √°cido, incluso a baja altitud y hasta entrado el invierno.",
   "confusion": "Otros boletos de carne azulante; algunos provocan trastornos digestivos."
  },
  "neoboletus_erythropus": {
@@ -284,6 +300,10 @@
    7,
    20
   ],
+  "ph": [
+   3.8,
+   6.0
+  ],
   "hosts": [
    [
     "Hayedo",
@@ -298,7 +318,7 @@
     0.9
    ],
    [
-    "CastaÒar",
+    "Casta√±ar",
     0.8
    ],
    [
@@ -314,8 +334,8 @@
     0.3
    ]
   ],
-  "desc": "Su nombre v·lido actual es Neoboletus luridiformis. Poros rojos y pie punteado de rojo; su carne amarilla se vuelve azul oscuro al instante al cortarla. Aparece en bosques de suelo ·cido de todo tipo. Solo es comestible bien cocinado.",
-  "confusion": "Rubroboletus satanas y otros boletos de poros rojos, tÛxicos, sobre todo en suelos calizos."
+  "desc": "Su nombre v√°lido actual es Neoboletus luridiformis. Poros rojos y pie punteado de rojo; su carne amarilla se vuelve azul oscuro al instante al cortarla. Aparece en bosques de suelo √°cido de todo tipo. Solo es comestible bien cocinado.",
+  "confusion": "Rubroboletus satanas y otros boletos de poros rojos, t√≥xicos, sobre todo en suelos calizos."
  },
  "cantharellus": {
   "name": "Cantharellus cibarius",
@@ -350,9 +370,13 @@
    4,
    15
   ],
+  "ph": [
+   4.0,
+   6.5
+  ],
   "hosts": [
    [
-    "CastaÒar",
+    "Casta√±ar",
     1.0
    ],
    [
@@ -380,8 +404,8 @@
     0.6
    ]
   ],
-  "desc": "Color yema de huevo, pliegues que bajan por el pie en lugar de l·minas verdaderas y olor afrutado a albaricoque. Sale en grupos en castaÒares, robledales y hayedos ·cidos desde el final de la primavera.",
-  "confusion": "Hygrophoropsis aurantiaca, con l·minas verdaderas y naranja intenso, y Omphalotus olearius, tÛxico, que crece en matas sobre madera de olivo o encina."
+  "desc": "Color yema de huevo, pliegues que bajan por el pie en lugar de l√°minas verdaderas y olor afrutado a albaricoque. Sale en grupos en casta√±ares, robledales y hayedos √°cidos desde el final de la primavera.",
+  "confusion": "Hygrophoropsis aurantiaca, con l√°minas verdaderas y naranja intenso, y Omphalotus olearius, t√≥xico, que crece en matas sobre madera de olivo o encina."
  },
  "cantharellus_lutescens": {
   "name": "Craterellus lutescens",
@@ -416,6 +440,10 @@
    8,
    24
   ],
+  "ph": [
+   6.5,
+   8.5
+  ],
   "hosts": [
    [
     "Pinar de silvestre, negro o laricio",
@@ -430,7 +458,7 @@
     0.5
    ],
    [
-    "Pinar de carrasco o piÒonero",
+    "Pinar de carrasco o pi√±onero",
     0.4
    ],
    [
@@ -442,12 +470,12 @@
     0.3
    ]
   ],
-  "desc": "Sombrero pardo sobre un pie hueco amarillo anaranjado y parte inferior casi lisa. Forma colonias numerosas en el musgo h˙medo de pinares de pino albar o laricio, casi siempre sobre suelos calizos y en umbrÌas, ya bien avanzado el otoÒo y aun despuÈs de las heladas.",
-  "confusion": "Craterellus tubaeformis, tambiÈn comestible, con pliegues gris·ceos bajo el sombrero."
+  "desc": "Sombrero pardo sobre un pie hueco amarillo anaranjado y parte inferior casi lisa. Forma colonias numerosas en el musgo h√∫medo de pinares de pino albar o laricio, casi siempre sobre suelos calizos y en umbr√≠as, ya bien avanzado el oto√±o y aun despu√©s de las heladas.",
+  "confusion": "Craterellus tubaeformis, tambi√©n comestible, con pliegues gris√°ceos bajo el sombrero."
  },
  "lactarius_deliciosus": {
   "name": "Lactarius deliciosus",
-  "common": "NÌscalo, robellÛn",
+  "common": "N√≠scalo, robell√≥n",
   "photo": "Lactarius deliciosus",
   "season": [
    0.3,
@@ -478,6 +506,10 @@
    10,
    28
   ],
+  "ph": [
+   4.5,
+   7.0
+  ],
   "hosts": [
    [
     "Pinar de pino negral o radiata",
@@ -488,7 +520,7 @@
     1.0
    ],
    [
-    "Pinar de carrasco o piÒonero",
+    "Pinar de carrasco o pi√±onero",
     0.7
    ],
    [
@@ -496,12 +528,12 @@
     0.2
    ]
   ],
-  "desc": "Sombrero anaranjado con cÌrculos concÈntricos, l·minas y l·tex naranja zanahoria; las zonas rozadas se manchan de verde. Siempre bajo pinos, sobre todo en suelos ·cidos o neutros, y de las setas m·s abundantes del otoÒo.",
-  "confusion": "Lactarius torminosus, tÛxico: sombrero con pelos en el borde y l·tex blanco."
+  "desc": "Sombrero anaranjado con c√≠rculos conc√©ntricos, l√°minas y l√°tex naranja zanahoria; las zonas rozadas se manchan de verde. Siempre bajo pinos, sobre todo en suelos √°cidos o neutros, y de las setas m√°s abundantes del oto√±o.",
+  "confusion": "Lactarius torminosus, t√≥xico: sombrero con pelos en el borde y l√°tex blanco."
  },
  "lactarius_sanguifluus": {
   "name": "Lactarius sanguifluus",
-  "common": "NÌscalo de sangre, rovellÛn vinoso",
+  "common": "N√≠scalo de sangre, rovell√≥n vinoso",
   "photo": "Lactarius sanguifluus",
   "season": [
    0.3,
@@ -532,9 +564,13 @@
    10,
    28
   ],
+  "ph": [
+   7.0,
+   8.5
+  ],
   "hosts": [
    [
-    "Pinar de carrasco o piÒonero",
+    "Pinar de carrasco o pi√±onero",
     1.0
    ],
    [
@@ -546,8 +582,8 @@
     0.7
    ]
   ],
-  "desc": "Muy parecido al nÌscalo, pero con tonos m·s vinosos y un l·tex rojo oscuro, como de sangre. Prefiere pinares de carrasco, laricio o silvestre sobre suelos calizos, donde el nÌscalo com˙n escasea.",
-  "confusion": "Lactarius torminosus, tÛxico: sombrero peludo y l·tex blanco."
+  "desc": "Muy parecido al n√≠scalo, pero con tonos m√°s vinosos y un l√°tex rojo oscuro, como de sangre. Prefiere pinares de carrasco, laricio o silvestre sobre suelos calizos, donde el n√≠scalo com√∫n escasea.",
+  "confusion": "Lactarius torminosus, t√≥xico: sombrero peludo y l√°tex blanco."
  },
  "pie_azul": {
   "name": "Lepista nuda",
@@ -582,6 +618,10 @@
    7,
    25
   ],
+  "ph": [
+   4.0,
+   8.5
+  ],
   "hosts": [
    [
     "Pinar de silvestre, negro o laricio",
@@ -592,7 +632,7 @@
     0.7
    ],
    [
-    "Pinar de carrasco o piÒonero",
+    "Pinar de carrasco o pi√±onero",
     0.7
    ],
    [
@@ -608,7 +648,7 @@
     0.6
    ],
    [
-    "CastaÒar",
+    "Casta√±ar",
     0.6
    ],
    [
@@ -616,8 +656,8 @@
     0.6
    ]
   ],
-  "desc": "Sombrero y l·minas lila viol·ceo que se vuelven pardos con la edad, con olor afrutado. Se alimenta de hojarasca y acÌculas, aguanta bien el frÌo y alarga la temporada hasta el invierno.",
-  "confusion": "Cortinarius viol·ceos, algunos muy tÛxicos: tienen una telilla bajo el sombrero y esporada color Ûxido. La de Lepista nuda es rosa p·lido."
+  "desc": "Sombrero y l√°minas lila viol√°ceo que se vuelven pardos con la edad, con olor afrutado. Se alimenta de hojarasca y ac√≠culas, aguanta bien el fr√≠o y alarga la temporada hasta el invierno.",
+  "confusion": "Cortinarius viol√°ceos, algunos muy t√≥xicos: tienen una telilla bajo el sombrero y esporada color √≥xido. La de Lepista nuda es rosa p√°lido."
  },
  "trompeta": {
   "name": "Craterellus cornucopioides",
@@ -652,6 +692,10 @@
    8,
    24
   ],
+  "ph": [
+   5.0,
+   8.0
+  ],
   "hosts": [
    [
     "Hayedo",
@@ -662,7 +706,7 @@
     0.8
    ],
    [
-    "CastaÒar",
+    "Casta√±ar",
     0.7
    ],
    [
@@ -678,8 +722,8 @@
     0.1
    ]
   ],
-  "desc": "Embudo gris negruzco sin l·minas, con la cara externa casi lisa. Se camufla entre la hojarasca de hayedos y robledales h˙medos; donde aparece una, suele haber muchas.",
-  "confusion": "Pocas confusiones peligrosas. Craterellus cinereus es parecida y tambiÈn comestible."
+  "desc": "Embudo gris negruzco sin l√°minas, con la cara externa casi lisa. Se camufla entre la hojarasca de hayedos y robledales h√∫medos; donde aparece una, suele haber muchas.",
+  "confusion": "Pocas confusiones peligrosas. Craterellus cinereus es parecida y tambi√©n comestible."
  },
  "lengua_vaca": {
   "name": "Hydnum repandum",
@@ -714,6 +758,10 @@
    8,
    22
   ],
+  "ph": [
+   4.0,
+   7.2
+  ],
   "hosts": [
    [
     "Robledal, melojar o quejigar",
@@ -724,7 +772,7 @@
     0.9
    ],
    [
-    "CastaÒar",
+    "Casta√±ar",
     0.8
    ],
    [
@@ -744,16 +792,16 @@
     0.6
    ],
    [
-    "Pinar de carrasco o piÒonero",
+    "Pinar de carrasco o pi√±onero",
     0.4
    ]
   ],
-  "desc": "Bajo el sombrero no hay l·minas sino pequeÒos aguijones quebradizos, lo que la hace muy f·cil de reconocer. Sale bajo frondosas y conÌferas hasta muy entrado el otoÒo; los ejemplares grandes amargan un poco.",
-  "confusion": "Hydnum rufescens, m·s anaranjada y tambiÈn comestible."
+  "desc": "Bajo el sombrero no hay l√°minas sino peque√±os aguijones quebradizos, lo que la hace muy f√°cil de reconocer. Sale bajo frondosas y con√≠feras hasta muy entrado el oto√±o; los ejemplares grandes amargan un poco.",
+  "confusion": "Hydnum rufescens, m√°s anaranjada y tambi√©n comestible."
  },
  "amanita_caesarea": {
   "name": "Amanita caesarea",
-  "common": "Oronja, amanita de los cÈsares",
+  "common": "Oronja, amanita de los c√©sares",
   "photo": "Amanita caesarea",
   "season": [
    0,
@@ -784,13 +832,17 @@
    12,
    24
   ],
+  "ph": [
+   4.0,
+   6.5
+  ],
   "hosts": [
    [
     "Encinar, alcornocal o dehesa",
     1.0
    ],
    [
-    "CastaÒar",
+    "Casta√±ar",
     1.0
    ],
    [
@@ -806,11 +858,11 @@
     0.2
    ],
    [
-    "Pinar de carrasco o piÒonero",
+    "Pinar de carrasco o pi√±onero",
     0.2
    ]
   ],
-  "desc": "Sombrero anaranjado intenso que nace de una volva blanca con forma de huevo, con l·minas y pie amarillos. Muy amante del calor: encinares, alcornocales, castaÒares y rebollares tras las tormentas de final de verano.",
-  "confusion": "Amanita muscaria, tÛxica, con l·minas y pie blancos y verrugas blancas. No recojas nunca ejemplares en huevo cerrado: podrÌan ser Amanita phalloides, mortal."
+  "desc": "Sombrero anaranjado intenso que nace de una volva blanca con forma de huevo, con l√°minas y pie amarillos. Muy amante del calor: encinares, alcornocales, casta√±ares y rebollares tras las tormentas de final de verano.",
+  "confusion": "Amanita muscaria, t√≥xica, con l√°minas y pie blancos y verrugas blancas. No recojas nunca ejemplares en huevo cerrado: podr√≠an ser Amanita phalloides, mortal."
  }
 }
