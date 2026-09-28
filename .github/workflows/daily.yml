@@ -22,8 +22,22 @@ jobs:
       - name: Capa GBIF (solo la primera vez)
         run: test -f data/habitat_gbif.json || python -m pipeline.habitat
 
+      - name: pH del suelo (solo la primera vez)
+        run: test -f data/ph_0.1.json || python -m pipeline.soil
+
       - name: Previsión del día
-        run: python -m pipeline.run_daily
+        env:   # opcionales: si no existen, se usa solo la humedad del modelo
+          EARTHDATA_USERNAME: ${{ secrets.EARTHDATA_USERNAME }}
+          EARTHDATA_PASSWORD: ${{ secrets.EARTHDATA_PASSWORD }}
+        # Si Open-Meteo falla del todo, espera 10 min y lo vuelve a intentar (hasta 3 veces).
+        # Los lotes ya descargados se reutilizan, así que cada intento solo pide lo que falta.
+        # Si los 3 fallan, el paso falla y la web conserva la previsión del día anterior.
+        run: |
+          for i in 1 2 3; do
+            python -m pipeline.run_daily && exit 0
+            echo "Intento $i fallido"; [ $i -lt 3 ] && sleep 600
+          done
+          exit 1
 
       - name: Publicar
         run: |
@@ -31,4 +45,5 @@ jobs:
           git config user.email "actions@users.noreply.github.com"
           git add data docs/data
           git commit -m "Previsión $(date -u +%F)" || echo "Sin cambios"
+          git pull --rebase
           git push

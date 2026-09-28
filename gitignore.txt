@@ -1,0 +1,11 @@
+# Los zip del Mapa Forestal pesan mucho: se procesan en local y solo se sube data/mfe_0.1.json
+data/mfe/
+__pycache__/
+*.pyc
+# La meteo histórica de la calibración se guarda en la caché de GitHub Actions
+data/modelo/meteo_cache/
+data/modelo/dataset.csv
+data/soilgrids/
+
+# Lotes de meteo del día (solo para reanudar si se corta la descarga)
+data/meteo_cache/
