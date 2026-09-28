@@ -12,8 +12,14 @@ import requests
 
 from .config import FORECAST_DAYS, PAST_DAYS
 
-URL = "https://api.open-meteo.com/v1/forecast"
-ARCHIVE_URL = "https://archive-api.open-meteo.com/v1/archive"
+import os
+
+# Con una clave de Open-Meteo (plan de pago, variable OPEN_METEO_API_KEY) se usan sus
+# servidores de clientes, sin los límites compartidos del plan gratuito.
+API_KEY = os.environ.get("OPEN_METEO_API_KEY", "").strip()
+_HOST = "customer-{}.open-meteo.com" if API_KEY else "{}.open-meteo.com"
+URL = f"https://{_HOST.format('api')}/v1/forecast"
+ARCHIVE_URL = f"https://{_HOST.format('archive-api')}/v1/archive"
 # Humedad del suelo del modelo por capas; se combina en 0-7 cm para que sea
 # comparable con ERA5-Land (histórico, usado en la calibración) y con SMAP (0-5 cm).
 SM_LAYERS = {"soil_moisture_0_to_1cm": 1, "soil_moisture_1_to_3cm": 2, "soil_moisture_3_to_9cm": 4}
@@ -24,29 +30,46 @@ class OpenMeteoError(RuntimeError):
     pass
 
 
+def _describe(r) -> str:
+    """Resumen legible de una respuesta inesperada, para el registro del workflow."""
+    body = (r.text or "").strip().replace("\n", " ")
+    return f"HTTP {r.status_code}, tipo {r.headers.get('Content-Type', '?')}, contenido: {body[:160] or '(vacío)'}"
+
+
 def _get_retry(url: str, params: dict, tries: int = 6, timeout=(20, 180)) -> dict | list:
-    """GET con reintentos ante cortes de red, tiempos de espera agotados, 429 y errores 5xx.
-    Espera 15 s, 30 s, 60 s, 2 min y 4 min entre intentos."""
+    """GET con reintentos ante cortes de red, tiempos agotados, respuestas vacías o que no
+    son JSON, 429 y errores 5xx. Espera 15 s, 30 s, 60 s, 2 min y 4 min entre intentos."""
+    if API_KEY:
+        params = {**params, "apikey": API_KEY}
     last = None
     for attempt in range(tries):
+        wait = 15 * 2 ** attempt
         try:
             r = requests.get(url, params=params, timeout=timeout)
-            if r.status_code == 200:
-                return r.json()
-            last = f"HTTP {r.status_code}: {r.text[:200]}"
+            try:
+                js = r.json()
+            except ValueError:                       # respuesta vacía, HTML de un proxy, cortada…
+                js = None
+            if r.status_code == 200 and js is not None:
+                return js
+            reason = js.get("reason", "") if isinstance(js, dict) else ""
+            last = f"HTTP {r.status_code}: {reason}" if reason else _describe(r)
             if r.status_code == 429:
-                wait = float(r.headers.get("Retry-After", 60 * (attempt + 1)))
-            elif r.status_code >= 500:
-                wait = 15 * 2 ** attempt
-            else:
-                raise OpenMeteoError(last)          # 4xx: petición incorrecta, no tiene sentido repetir
+                if "daily" in reason.lower():
+                    raise OpenMeteoError(
+                        "Open-Meteo ha agotado el límite DIARIO gratuito para esta IP. En GitHub Actions las "
+                        "IP son compartidas con otros usuarios, así que puede pasar aunque tú hagas pocas "
+                        "peticiones. Opciones: reintentarlo más tarde, ejecutarlo desde tu ordenador, o "
+                        "añadir una clave de pago como secreto OPEN_METEO_API_KEY. Detalle: " + reason)
+                wait = max(wait, float(r.headers.get("Retry-After", 60 * (attempt + 1))))
+            elif 400 <= r.status_code < 500:
+                raise OpenMeteoError(last)          # petición incorrecta: repetirla no sirve
         except requests.RequestException as e:      # timeout, conexión cortada, fallo SSL…
             last = f"{e.__class__.__name__}: {e}"
-            wait = 15 * 2 ** attempt
         if attempt < tries - 1:
-            print(f"    Open-Meteo no responde ({last[:90]}); reintento en {wait:.0f} s")
+            print(f"    Open-Meteo no responde bien ({last[:120]}); reintento en {wait:.0f} s")
             time.sleep(wait)
-    raise OpenMeteoError(f"Open-Meteo sigue sin responder tras {tries} intentos: {last}")
+    raise OpenMeteoError(f"Open-Meteo sigue sin responder tras {tries} intentos. Último error: {last}")
 
 
 def _fetch_chunk(chunk: list[dict]) -> list[dict]:
@@ -141,7 +164,7 @@ def fetch_archive(lat: float, lon: float, start: str, end: str) -> dict:
             "SM": f("soil_moisture_0_to_7cm_mean")}
 
 
-ELEV_URL = "https://api.open-meteo.com/v1/elevation"
+ELEV_URL = f"https://{_HOST.format('api')}/v1/elevation"
 
 
 def fine_elevation(cells: list[dict], step: float) -> np.ndarray:

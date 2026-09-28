@@ -29,6 +29,7 @@ jobs:
         env:   # opcionales: si no existen, se usa solo la humedad del modelo
           EARTHDATA_USERNAME: ${{ secrets.EARTHDATA_USERNAME }}
           EARTHDATA_PASSWORD: ${{ secrets.EARTHDATA_PASSWORD }}
+          OPEN_METEO_API_KEY: ${{ secrets.OPEN_METEO_API_KEY }}   # opcional (plan de pago)
         # Si Open-Meteo falla del todo, espera 10 min y lo vuelve a intentar (hasta 3 veces).
         # Los lotes ya descargados se reutilizan, así que cada intento solo pide lo que falta.
         # Si los 3 fallan, el paso falla y la web conserva la previsión del día anterior.
