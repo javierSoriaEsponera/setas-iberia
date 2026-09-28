@@ -4,33 +4,33 @@
   "common": "Boleto, calabaza",
   "photo": "Boletus edulis",
   "season": [
+   0.05,
    0,
    0,
    0,
-   0,
-   0.25,
-   0.35,
-   0.15,
+   0.1,
+   0.2,
+   0.1,
    0.3,
    0.9,
    1,
    0.7,
-   0.15
+   0.2
   ],
   "elev": [
-   200,
-   700,
+   100,
+   500,
    1800,
    2200
   ],
   "temp": [
-   9,
-   17
+   10,
+   16
   ],
-  "rain_mm": 50,
+  "rain_mm": 70,
   "lag": [
-   8,
-   22
+   6,
+   26
   ],
   "hosts": [
    [
@@ -38,11 +38,11 @@
     1.0
    ],
    [
-    "Castañar",
+    "Pinar de silvestre, negro o laricio",
     0.9
    ],
    [
-    "Pinar de silvestre, negro o laricio",
+    "Castañar",
     0.9
    ],
    [
@@ -51,7 +51,7 @@
    ],
    [
     "Robledal, melojar o quejigar",
-    0.7
+    0.8
    ],
    [
     "Pinar de pino negral o radiata",
@@ -59,7 +59,7 @@
    ],
    [
     "Encinar, alcornocal o dehesa",
-    0.2
+    0.3
    ],
    [
     "Pinar de carrasco o piñonero",
@@ -78,24 +78,24 @@
    0,
    0,
    0,
-   0.4,
+   0.3,
+   0.6,
    0.5,
-   0.2,
-   0.2,
-   0.8,
+   0.4,
+   0.9,
    1,
    0.6,
-   0.1
+   0.2
   ],
   "elev": [
    0,
-   300,
-   1100,
+   200,
+   1200,
    1500
   ],
   "temp": [
-   13,
-   21
+   14,
+   22
   ],
   "rain_mm": 40,
   "lag": [
@@ -109,11 +109,11 @@
    ],
    [
     "Castañar",
-    0.9
+    1.0
    ],
    [
     "Robledal, melojar o quejigar",
-    0.8
+    0.9
    ],
    [
     "Hayedo",
@@ -134,20 +134,20 @@
   "season": [
    0,
    0,
-   0,
    0.1,
+   0.3,
    0.7,
    0.8,
-   0.3,
-   0.3,
-   0.9,
-   1,
    0.4,
-   0.05
+   0.2,
+   0.8,
+   1,
+   0.6,
+   0.2
   ],
   "elev": [
-   500,
-   1000,
+   400,
+   900,
    1900,
    2300
   ],
@@ -166,24 +166,24 @@
     1.0
    ],
    [
-    "Pinar de pino negral o radiata",
+    "Abetal o pinsapar",
     0.7
    ],
    [
-    "Abetal o pinsapar",
-    0.6
+    "Hayedo",
+    0.5
    ],
    [
     "Castañar",
     0.5
    ],
    [
-    "Hayedo",
-    0.4
+    "Pinar de pino negral o radiata",
+    0.5
    ],
    [
     "Robledal, melojar o quejigar",
-    0.3
+    0.4
    ]
   ],
   "desc": "Sombrero rojizo a granate y pie con tonos rosados. Muy ligado al pino silvestre en montaña, con dos salidas: una a final de primavera y otra en el otoño clásico.",
@@ -199,7 +199,7 @@
    0,
    0,
    0,
-   0.05,
+   0,
    0.05,
    0.2,
    0.7,
@@ -210,11 +210,11 @@
   "elev": [
    0,
    300,
-   1500,
+   1600,
    2000
   ],
   "temp": [
-   8,
+   7,
    16
   ],
   "rain_mm": 50,
@@ -252,18 +252,18 @@
   "confusion": "Otros boletos de carne azulante; algunos provocan trastornos digestivos."
  },
  "neoboletus_erythropus": {
-  "name": "Neoboletus erythropus",
+  "name": "Neoboletus luridiformis",
   "common": "Pie rojo, Boletus erythropus",
-  "photo": "Neoboletus erythropus",
+  "photo": "Neoboletus luridiformis",
   "season": [
    0,
    0,
    0,
-   0,
-   0.2,
+   0.1,
+   0.4,
+   0.6,
    0.5,
-   0.4,
-   0.4,
+   0.5,
    0.9,
    1,
    0.6,
@@ -290,15 +290,15 @@
     0.9
    ],
    [
-    "Castañar",
+    "Abetal o pinsapar",
     0.9
    ],
    [
     "Pinar de silvestre, negro o laricio",
-    0.8
+    0.9
    ],
    [
-    "Abetal o pinsapar",
+    "Castañar",
     0.8
    ],
    [
@@ -314,7 +314,7 @@
     0.3
    ]
   ],
-  "desc": "Poros rojos y pie punteado de rojo; su carne amarilla se vuelve azul oscuro al instante al cortarla. Aparece en bosques de suelo ácido de todo tipo. Solo es comestible bien cocinado.",
+  "desc": "Su nombre válido actual es Neoboletus luridiformis. Poros rojos y pie punteado de rojo; su carne amarilla se vuelve azul oscuro al instante al cortarla. Aparece en bosques de suelo ácido de todo tipo. Solo es comestible bien cocinado.",
   "confusion": "Rubroboletus satanas y otros boletos de poros rojos, tóxicos, sobre todo en suelos calizos."
  },
  "cantharellus": {
@@ -347,8 +347,8 @@
   ],
   "rain_mm": 45,
   "lag": [
-   5,
-   18
+   4,
+   15
   ],
   "hosts": [
    [
@@ -383,21 +383,83 @@
   "desc": "Color yema de huevo, pliegues que bajan por el pie en lugar de láminas verdaderas y olor afrutado a albaricoque. Sale en grupos en castañares, robledales y hayedos ácidos desde el final de la primavera.",
   "confusion": "Hygrophoropsis aurantiaca, con láminas verdaderas y naranja intenso, y Omphalotus olearius, tóxico, que crece en matas sobre madera de olivo o encina."
  },
- "niscalos": {
-  "name": "Lactarius deliciosus / sanguifluus",
-  "common": "Níscalo, robellón",
-  "photo": "Lactarius deliciosus",
+ "cantharellus_lutescens": {
+  "name": "Craterellus lutescens",
+  "common": "Angula de monte, trompeta amarilla",
+  "photo": "Craterellus lutescens",
   "season": [
+   0.4,
    0.2,
-   0.05,
+   0,
+   0,
+   0,
    0,
    0,
    0.1,
-   0,
-   0,
-   0,
-   0.4,
+   0.3,
+   0.8,
    1,
+   0.7
+  ],
+  "elev": [
+   0,
+   300,
+   1600,
+   1900
+  ],
+  "temp": [
+   5,
+   13
+  ],
+  "rain_mm": 60,
+  "lag": [
+   8,
+   24
+  ],
+  "hosts": [
+   [
+    "Pinar de silvestre, negro o laricio",
+    1.0
+   ],
+   [
+    "Pinar de pino negral o radiata",
+    0.5
+   ],
+   [
+    "Abetal o pinsapar",
+    0.5
+   ],
+   [
+    "Pinar de carrasco o piñonero",
+    0.4
+   ],
+   [
+    "Robledal, melojar o quejigar",
+    0.3
+   ],
+   [
+    "Hayedo",
+    0.3
+   ]
+  ],
+  "desc": "Sombrero pardo sobre un pie hueco amarillo anaranjado y parte inferior casi lisa. Forma colonias numerosas en el musgo húmedo de pinares de pino albar o laricio, casi siempre sobre suelos calizos y en umbrías, ya bien avanzado el otoño y aun después de las heladas.",
+  "confusion": "Craterellus tubaeformis, también comestible, con pliegues grisáceos bajo el sombrero."
+ },
+ "lactarius_deliciosus": {
+  "name": "Lactarius deliciosus",
+  "common": "Níscalo, robellón",
+  "photo": "Lactarius deliciosus",
+  "season": [
+   0.3,
+   0.1,
+   0,
+   0,
+   0.05,
+   0,
+   0,
+   0.05,
+   0.3,
+   0.9,
    1,
    0.6
   ],
@@ -409,12 +471,12 @@
   ],
   "temp": [
    8,
-   17
+   16
   ],
   "rain_mm": 50,
   "lag": [
-   8,
-   22
+   10,
+   28
   ],
   "hosts": [
    [
@@ -427,15 +489,65 @@
    ],
    [
     "Pinar de carrasco o piñonero",
-    0.9
+    0.7
    ],
    [
     "Abetal o pinsapar",
     0.2
    ]
   ],
-  "desc": "Láminas y látex anaranjados en L. deliciosus o rojo vino en L. sanguifluus; las zonas rozadas se manchan de verde. Siempre bajo pinos, y de las setas más abundantes del otoño.",
+  "desc": "Sombrero anaranjado con círculos concéntricos, láminas y látex naranja zanahoria; las zonas rozadas se manchan de verde. Siempre bajo pinos, sobre todo en suelos ácidos o neutros, y de las setas más abundantes del otoño.",
   "confusion": "Lactarius torminosus, tóxico: sombrero con pelos en el borde y látex blanco."
+ },
+ "lactarius_sanguifluus": {
+  "name": "Lactarius sanguifluus",
+  "common": "Níscalo de sangre, rovellón vinoso",
+  "photo": "Lactarius sanguifluus",
+  "season": [
+   0.3,
+   0.1,
+   0,
+   0,
+   0.05,
+   0,
+   0,
+   0,
+   0.3,
+   0.9,
+   1,
+   0.6
+  ],
+  "elev": [
+   0,
+   100,
+   1200,
+   1700
+  ],
+  "temp": [
+   9,
+   18
+  ],
+  "rain_mm": 45,
+  "lag": [
+   10,
+   28
+  ],
+  "hosts": [
+   [
+    "Pinar de carrasco o piñonero",
+    1.0
+   ],
+   [
+    "Pinar de pino negral o radiata",
+    0.7
+   ],
+   [
+    "Pinar de silvestre, negro o laricio",
+    0.7
+   ]
+  ],
+  "desc": "Muy parecido al níscalo, pero con tonos más vinosos y un látex rojo oscuro, como de sangre. Prefiere pinares de carrasco, laricio o silvestre sobre suelos calizos, donde el níscalo común escasea.",
+  "confusion": "Lactarius torminosus, tóxico: sombrero peludo y látex blanco."
  },
  "pie_azul": {
   "name": "Lepista nuda",
@@ -443,15 +555,15 @@
   "photo": "Lepista nuda",
   "season": [
    0.6,
-   0.3,
+   0.4,
    0.2,
+   0.2,
+   0.05,
+   0,
+   0,
+   0,
    0.1,
-   0,
-   0,
-   0,
-   0,
-   0.2,
-   0.6,
+   0.5,
    1,
    1
   ],
@@ -462,8 +574,8 @@
    2000
   ],
   "temp": [
-   4,
-   13
+   3,
+   12
   ],
   "rain_mm": 40,
   "lag": [
@@ -480,16 +592,16 @@
     0.7
    ],
    [
+    "Pinar de carrasco o piñonero",
+    0.7
+   ],
+   [
     "Robledal, melojar o quejigar",
     0.7
    ],
    [
-    "Pinar de carrasco o piñonero",
-    0.6
-   ],
-   [
     "Encinar, alcornocal o dehesa",
-    0.6
+    0.7
    ],
    [
     "Hayedo",
@@ -512,33 +624,33 @@
   "common": "Trompeta de la muerte",
   "photo": "Craterellus cornucopioides",
   "season": [
-   0,
+   0.1,
    0,
    0,
    0,
    0,
    0,
    0.05,
-   0.2,
-   0.7,
+   0.3,
+   0.8,
    1,
-   0.9,
+   0.8,
    0.3
   ],
   "elev": [
-   200,
-   500,
-   1500,
-   1900
+   0,
+   300,
+   1400,
+   1700
   ],
   "temp": [
-   10,
-   17
+   9,
+   16
   ],
   "rain_mm": 60,
   "lag": [
    8,
-   22
+   24
   ],
   "hosts": [
    [
@@ -551,19 +663,19 @@
    ],
    [
     "Castañar",
-    0.8
+    0.7
    ],
    [
     "Abetal o pinsapar",
-    0.5
+    0.4
    ],
    [
     "Encinar, alcornocal o dehesa",
-    0.3
+    0.2
    ],
    [
     "Pinar de silvestre, negro o laricio",
-    0.2
+    0.1
    ]
   ],
   "desc": "Embudo gris negruzco sin láminas, con la cara externa casi lisa. Se camufla entre la hojarasca de hayedos y robledales húmedos; donde aparece una, suele haber muchas.",
@@ -574,7 +686,7 @@
   "common": "Lengua de vaca, gamuza",
   "photo": "Hydnum repandum",
   "season": [
-   0.3,
+   0.4,
    0.1,
    0,
    0,
@@ -582,10 +694,10 @@
    0,
    0,
    0.1,
-   0.5,
+   0.4,
+   0.9,
    1,
-   1,
-   0.7
+   0.8
   ],
   "elev": [
    0,
@@ -594,8 +706,8 @@
    2100
   ],
   "temp": [
-   7,
-   16
+   6,
+   15
   ],
   "rain_mm": 45,
   "lag": [
@@ -639,68 +751,6 @@
   "desc": "Bajo el sombrero no hay láminas sino pequeños aguijones quebradizos, lo que la hace muy fácil de reconocer. Sale bajo frondosas y coníferas hasta muy entrado el otoño; los ejemplares grandes amargan un poco.",
   "confusion": "Hydnum rufescens, más anaranjada y también comestible."
  },
- "cantharellus_lutescens": {
-  "name": "Craterellus lutescens",
-  "common": "Angula de monte, trompeta amarilla",
-  "photo": "Craterellus lutescens",
-  "season": [
-   0.4,
-   0.1,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0,
-   0.2,
-   0.8,
-   1,
-   0.8
-  ],
-  "elev": [
-   0,
-   300,
-   1500,
-   1900
-  ],
-  "temp": [
-   6,
-   14
-  ],
-  "rain_mm": 60,
-  "lag": [
-   8,
-   22
-  ],
-  "hosts": [
-   [
-    "Pinar de silvestre, negro o laricio",
-    0.9
-   ],
-   [
-    "Pinar de pino negral o radiata",
-    0.9
-   ],
-   [
-    "Abetal o pinsapar",
-    0.8
-   ],
-   [
-    "Hayedo",
-    0.6
-   ],
-   [
-    "Robledal, melojar o quejigar",
-    0.5
-   ],
-   [
-    "Castañar",
-    0.5
-   ]
-  ],
-  "desc": "Sombrero pardo sobre un pie hueco amarillo anaranjado y parte inferior casi lisa. Forma colonias numerosas en el musgo húmedo de pinares y bosques mixtos, ya bien avanzado el otoño.",
-  "confusion": "Craterellus tubaeformis, también comestible, con pliegues grisáceos bajo el sombrero."
- },
  "amanita_caesarea": {
   "name": "Amanita caesarea",
   "common": "Oronja, amanita de los césares",
@@ -711,7 +761,7 @@
    0,
    0,
    0,
-   0.3,
+   0.2,
    0.5,
    0.8,
    1,
@@ -721,18 +771,18 @@
   ],
   "elev": [
    0,
-   200,
-   1100,
-   1500
+   300,
+   1000,
+   1300
   ],
   "temp": [
-   16,
-   24
+   17,
+   25
   ],
-  "rain_mm": 35,
+  "rain_mm": 40,
   "lag": [
-   6,
-   18
+   12,
+   24
   ],
   "hosts": [
    [
@@ -748,12 +798,16 @@
     0.9
    ],
    [
+    "Hayedo",
+    0.3
+   ],
+   [
     "Pinar de pino negral o radiata",
-    0.4
+    0.2
    ],
    [
     "Pinar de carrasco o piñonero",
-    0.3
+    0.2
    ]
   ],
   "desc": "Sombrero anaranjado intenso que nace de una volva blanca con forma de huevo, con láminas y pie amarillos. Muy amante del calor: encinares, alcornocales, castañares y rebollares tras las tormentas de final de verano.",
