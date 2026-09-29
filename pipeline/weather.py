@@ -102,9 +102,12 @@ def fetch_weather(cells: list[dict], batch: int = 50, pause: float = 20.0) -> di
     cache.mkdir(parents=True, exist_ok=True)
     for old in cache_root.iterdir():                 # borra cachés de días anteriores
         if old.is_dir() and old != cache:
-            for f in old.glob("*.json"):
-                f.unlink()
-            old.rmdir()
+            try:
+                for f in old.glob("*.json"):
+                    f.unlink()
+                old.rmdir()
+            except OSError as e:                     # p. ej. bloqueada por el sync de Google Drive
+                print(f"  · no he podido borrar la caché antigua {old.name} ({e}); la dejo para más tarde")
 
     rows = []
     for b in range(0, len(cells), batch):
