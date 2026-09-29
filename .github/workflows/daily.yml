@@ -2,8 +2,12 @@ name: Actualizar mapa de setas
 
 on:
   schedule:
-    - cron: "30 4 * * *"   # todos los días a las 04:30 UTC
-  workflow_dispatch:        # botón para lanzarlo a mano
+    # GitHub puede retrasar o incluso saltarse ejecuciones programadas cuando está saturado,
+    # sobre todo en las horas en punto. Por eso hay dos horarios, en minutos poco concurridos:
+    # si el primero ya publicó la previsión de hoy, el segundo termina enseguida sin hacer nada.
+    - cron: "17 4 * * *"    # 04:17 UTC (06:17 en verano, 05:17 en invierno, hora peninsular)
+    - cron: "47 7 * * *"    # 07:47 UTC, de respaldo
+  workflow_dispatch:        # botón «Run workflow» para lanzarlo a mano
 
 permissions:
   contents: write
